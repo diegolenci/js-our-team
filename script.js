@@ -36,3 +36,22 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+const container = document.querySelector('.flex')
+
+for( let i = 0; i < teamMembers.length; i++){
+   let element = teamMembers[i]
+
+  container.innerHTML += `
+  <div class="flex">
+                <figure>
+                    <img height="90px" src='./imgs/${element.img}' alt="${element.name}">
+                </figure>
+                <div class="flex flex-column">
+                    <h5>"${element.name}"</h5>
+                    <span>"${element.email}"</span>
+                    <span>"${element.role}"</span>
+                </div>
+            </div>`
+}
+
